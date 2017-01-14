@@ -1,32 +1,33 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.4
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Waktu pembuatan: 10. Januari 2017 jam 21:41
--- Versi Server: 5.1.41
--- Versi PHP: 5.3.1
+-- Host: 127.0.0.1
+-- Generation Time: Jan 14, 2017 at 11:42 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.23
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `skripsi`
+-- Database: `skripsibocat`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `cohort_pdpt`
+-- Table structure for table `cohort_pdpt`
 --
 
-CREATE TABLE IF NOT EXISTS `cohort_pdpt` (
-  `id` int(10) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `cohort_pdpt` (
+  `id` int(10) NOT NULL,
   `tahun` int(4) NOT NULL,
   `semester` int(2) NOT NULL,
   `nim` int(10) NOT NULL,
@@ -36,12 +37,11 @@ CREATE TABLE IF NOT EXISTS `cohort_pdpt` (
   `ipk` float NOT NULL,
   `email` varchar(255) NOT NULL,
   `alamat` varchar(255) NOT NULL,
-  `tahun lulus` int(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3090 ;
+  `tahun lulus` int(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `cohort_pdpt`
+-- Dumping data for table `cohort_pdpt`
 --
 
 INSERT INTO `cohort_pdpt` (`id`, `tahun`, `semester`, `nim`, `nama`, `ips`, `tot_sks`, `ipk`, `email`, `alamat`, `tahun lulus`) VALUES
@@ -177,38 +177,31 @@ INSERT INTO `cohort_pdpt` (`id`, `tahun`, `semester`, `nim`, `nama`, `ips`, `tot
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `hasil_kuesioner`
+-- Table structure for table `hasil_kuesioner`
 --
 
-CREATE TABLE IF NOT EXISTS `hasil_kuesioner` (
-  `id_jawaban` int(255) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `hasil_kuesioner` (
+  `id_jawaban` int(255) NOT NULL,
   `id_kuesioner` int(255) NOT NULL,
   `jawaban` varchar(255) NOT NULL,
-  `tanggal` date NOT NULL,
-  PRIMARY KEY (`id_jawaban`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
--- Dumping data untuk tabel `hasil_kuesioner`
---
-
+  `tanggal` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jawab_pertanyaan`
+-- Table structure for table `jawab_pertanyaan`
 --
 
-CREATE TABLE IF NOT EXISTS `jawab_pertanyaan` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `jawab_pertanyaan` (
+  `id` int(11) NOT NULL,
   `nim` int(11) NOT NULL,
   `id_pertanyaan` int(11) NOT NULL,
-  `jawaban` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+  `jawaban` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jawab_pertanyaan`
+-- Dumping data for table `jawab_pertanyaan`
 --
 
 INSERT INTO `jawab_pertanyaan` (`id`, `nim`, `id_pertanyaan`, `jawaban`) VALUES
@@ -221,11 +214,11 @@ INSERT INTO `jawab_pertanyaan` (`id`, `nim`, `id_pertanyaan`, `jawaban`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kuesioner`
+-- Table structure for table `kuesioner`
 --
 
-CREATE TABLE IF NOT EXISTS `kuesioner` (
-  `id_kuesioner` int(255) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `kuesioner` (
+  `id_kuesioner` int(255) NOT NULL,
   `nim` varchar(255) NOT NULL,
   `q1` varchar(200) NOT NULL,
   `a1` varchar(200) NOT NULL,
@@ -244,12 +237,11 @@ CREATE TABLE IF NOT EXISTS `kuesioner` (
   `q8` varchar(200) NOT NULL,
   `a8` varchar(200) NOT NULL,
   `q9` varchar(200) NOT NULL,
-  `a9` varchar(200) NOT NULL,
-  PRIMARY KEY (`id_kuesioner`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `a9` varchar(200) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kuesioner`
+-- Dumping data for table `kuesioner`
 --
 
 INSERT INTO `kuesioner` (`id_kuesioner`, `nim`, `q1`, `a1`, `q2`, `a2`, `q3`, `a3`, `q4`, `a4`, `q5`, `a5`, `q6`, `a6`, `q7`, `a7`, `q8`, `a8`, `q9`, `a9`) VALUES
@@ -258,64 +250,68 @@ INSERT INTO `kuesioner` (`id_kuesioner`, `nim`, `q1`, `a1`, `q2`, `a2`, `q3`, `a
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `list_pertanyaan`
+-- Table structure for table `list_pertanyaan`
 --
 
-CREATE TABLE IF NOT EXISTS `list_pertanyaan` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `list_pertanyaan` (
+  `id` int(11) NOT NULL,
   `pertanyaan` text NOT NULL,
   `type_input` varchar(20) NOT NULL,
   `sugestion` text NOT NULL,
   `jawaban` text NOT NULL,
-  `waktu_buat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
-
---
--- Dumping data untuk tabel `list_pertanyaan`
---
-
-INSERT INTO `list_pertanyaan` (`id`, `pertanyaan`, `type_input`, `sugestion`, `jawaban`, `waktu_buat`) VALUES
-(1, 'Dimana Perusahaan Anda??', 'text', '', '', '2017-01-10 20:18:07'),
-(2, 'Status Anda Sekarang Dimana?', 'radio_button', 'karyawan,kontrak', '', '2017-01-10 20:18:07');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `login`
---
-
-CREATE TABLE IF NOT EXISTS `login` (
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `level` varchar(255) NOT NULL,
-  PRIMARY KEY (`username`)
+  `waktu_buat` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `login`
+-- Dumping data for table `list_pertanyaan`
 --
 
+INSERT INTO `list_pertanyaan` (`id`, `pertanyaan`, `type_input`, `sugestion`, `jawaban`, `waktu_buat`) VALUES
+(1, 'Dimana Perusahaan Anda??', 'text', '', '', '2017-01-10 13:18:07'),
+(2, 'Status Anda Sekarang Dimana?', 'radio_button', 'karyawan,kontrak', '', '2017-01-10 13:18:07');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `loker`
+-- Table structure for table `login`
 --
 
-CREATE TABLE IF NOT EXISTS `loker` (
-  `id_loker` int(255) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `avatar` varchar(255) NOT NULL DEFAULT 'user.png',
+  `name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `level` varchar(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `username`, `avatar`, `name`, `password`, `level`) VALUES
+(1, 'admin', 'user.png', 'Admin', 'admin', 'admin'),
+(2, 'alumni', 'user.png', 'Alumni', 'alumni', 'alumni'),
+(3, 'guest', 'user.png', 'Guest', 'guest', 'guest');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `loker`
+--
+
+CREATE TABLE `loker` (
+  `id_loker` int(255) NOT NULL,
   `nama_perusahaan` varchar(200) NOT NULL,
   `posisi` varchar(200) NOT NULL,
   `batas_waktu` varchar(200) NOT NULL,
   `alamat` varchar(200) NOT NULL,
   `no_telp` int(200) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  PRIMARY KEY (`id_loker`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `email` varchar(200) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `loker`
+-- Dumping data for table `loker`
 --
 
 INSERT INTO `loker` (`id_loker`, `nama_perusahaan`, `posisi`, `batas_waktu`, `alamat`, `no_telp`, `email`) VALUES
@@ -324,21 +320,111 @@ INSERT INTO `loker` (`id_loker`, `nama_perusahaan`, `posisi`, `batas_waktu`, `al
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `saran`
+-- Table structure for table `saran`
 --
 
-CREATE TABLE IF NOT EXISTS `saran` (
-  `id` int(255) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `saran` (
+  `id` int(255) NOT NULL,
   `saran` text NOT NULL,
-  `tanggal` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `tanggal` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `saran`
+-- Indexes for dumped tables
 --
 
+--
+-- Indexes for table `cohort_pdpt`
+--
+ALTER TABLE `cohort_pdpt`
+  ADD PRIMARY KEY (`id`);
 
+--
+-- Indexes for table `hasil_kuesioner`
+--
+ALTER TABLE `hasil_kuesioner`
+  ADD PRIMARY KEY (`id_jawaban`);
+
+--
+-- Indexes for table `jawab_pertanyaan`
+--
+ALTER TABLE `jawab_pertanyaan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kuesioner`
+--
+ALTER TABLE `kuesioner`
+  ADD PRIMARY KEY (`id_kuesioner`);
+
+--
+-- Indexes for table `list_pertanyaan`
+--
+ALTER TABLE `list_pertanyaan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `loker`
+--
+ALTER TABLE `loker`
+  ADD PRIMARY KEY (`id_loker`);
+
+--
+-- Indexes for table `saran`
+--
+ALTER TABLE `saran`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `cohort_pdpt`
+--
+ALTER TABLE `cohort_pdpt`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3090;
+--
+-- AUTO_INCREMENT for table `hasil_kuesioner`
+--
+ALTER TABLE `hasil_kuesioner`
+  MODIFY `id_jawaban` int(255) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `jawab_pertanyaan`
+--
+ALTER TABLE `jawab_pertanyaan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `kuesioner`
+--
+ALTER TABLE `kuesioner`
+  MODIFY `id_kuesioner` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `list_pertanyaan`
+--
+ALTER TABLE `list_pertanyaan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `loker`
+--
+ALTER TABLE `loker`
+  MODIFY `id_loker` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `saran`
+--
+ALTER TABLE `saran`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
