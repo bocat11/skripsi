@@ -64,7 +64,7 @@
                   </li>
                   <li><a><i class="fa fa-desktop"></i>Data Alumni<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="rincian.php">Rincian</a></li>
+                      <li><a href="index.php?hal=rincian">Rincian</a></li>
                       
                     </ul>
                   </li>
@@ -258,8 +258,8 @@
 	include "koneksi.php";
 	$no=1;
 	$sql="SELECT * FROM `kuesioner` ";
-	$hasil=mysql_query($sql);
-	while($data=mysql_fetch_array($hasil)){
+	$hasil=mysqli_query($konek,$sql);
+	while($data=mysqli_fetch_array($hasil)){
 	              	
 	 echo"
 	  <table id='datatable' class='table table-striped table-bordered'>

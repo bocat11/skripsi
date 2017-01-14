@@ -5,12 +5,12 @@
         </li>
         <li><a><i class="fa fa-desktop"></i>Data Alumni<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="rincianguest.php">Rincian</a></li>
+                <li><a href="index.php?hal=rincian">Rincian</a></li>
             </ul>
         </li>
         <li><a><i class="fa fa-table"></i> E-career<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="lowonganguest.php">Lowongan perkerjaan</a></li>
+                <li><a href="index.php?hal=lowongan">Lowongan perkerjaan</a></li>
                 <li><a href="datapekerjaanguest.php">Data pekerja</a></li>
             </ul>
         </li>

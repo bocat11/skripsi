@@ -1,5 +1,5 @@
 <?php
-include "koneksi.php";
+require "koneksi.php";
 
 if (isset($_GET['hal'])) {
     $halaman = $_GET['hal'];
@@ -8,25 +8,15 @@ if (isset($_GET['hal'])) {
 }
 
 switch ($halaman) {
-    case 'dashboard':
-        include "halaman/dashboard.php";
+    case 'rincian':
+        include "halaman/rincian.php";
         break;
-    case 'reset_password':
-        include "halaman/reset_password.php";
+    case 'lowongan':
+        include "halaman/lowongan.php";
         break;
-    case 'ldp_create':
-        include "halaman/ldp_create.php";
+    case 'tambah-lowongan':
+        include "halaman/tambah_lowongan.php";
         break;
-    case 'ldp_draft':
-        include "halaman/ldp_draft.php";
-        break;
-    case 'ldp_status':
-        include "halaman/ldp_status.php";
-        break;
-    case 'service_info':
-        include "halaman/service_info.php";
-        break;
-
     default:
         include "halaman/dashboard.php";
         break;

@@ -64,7 +64,7 @@
                   </li>
                   <li><a><i class="fa fa-desktop"></i>Data Alumni<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="rincian.php">Rincian</a></li>
+                      <li><a href="index.php?hal=rincian">Rincian</a></li>
                       
                     </ul>
                   </li>

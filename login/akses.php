@@ -16,7 +16,7 @@ if ($ketemu > 0 ) {
     $_SESSION['avatar'] = $data['avatar'];
     $_SESSION['username'] = $data['username'];
     $_SESSION['level'] = $data['level'];
-    header('Location: ../index.php?dashboard');
+    header('Location: ../index.php?hal=dashboard');
 } else {
     $_SESSION['errorlogin'] = true;
     header('Location: ../login.php');

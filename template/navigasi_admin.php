@@ -1,7 +1,7 @@
 <div class="menu_section">
     <ul class="nav side-menu">
         <li>
-            <a href="admin.php"><i class="fa fa-home"></i> Beranda</a>
+            <a href="index.php?hal=beranda"><i class="fa fa-home"></i> Beranda</a>
         </li>
         <li><a><i class="fa fa-edit"></i> Validasi Data <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
@@ -11,13 +11,13 @@
         </li>
         <li><a><i class="fa fa-desktop"></i>Data Alumni<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="rincian.php">Rincian</a></li>
+                <li><a href="index.php?hal=rincian">Rincian</a></li>
 
             </ul>
         </li>
         <li><a><i class="fa fa-table"></i> E-career<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="lowonganadmin.php">Input Loker</a></li>
+                <li><a href="index.php?hal=lowongan">Input Loker</a></li>
                 <li><a href="datapekerjaanadmin.php">Input Data pekerja</a></li>
             </ul>
         </li>
