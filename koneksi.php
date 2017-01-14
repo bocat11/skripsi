@@ -1,5 +1,3 @@
 <?php
-mysql_connect('localhost','root','');
-mysql_select_db('skripsi');
-
+$konek=mysqli_connect("localhost","root","","skripsibocat");
 ?>
