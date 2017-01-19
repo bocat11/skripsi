@@ -13,12 +13,5 @@
                 <li><a href="index.php?hal=lowongan">Lowongan perkerjaan</a></li>
             </ul>
         </li>
-        <li><a><i class="fa fa-bar-chart-o"></i> Grafik<span class="fa fa-chevron-down"></span></a>
-            <ul class="nav child_menu">
-                <li><a href="#">Grafik utama</a></li>
-                <li><a href="#">Grafik yang sesuai dengan prodi</a></li>
-                <li><a href="#">Grafik yang wiraswasta </a></li>
-            </ul>
-        </li>
     </ul>
 </div>

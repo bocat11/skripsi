@@ -21,7 +21,7 @@
         </li>
         <li><a><i class="fa fa-info-circle"></i> Saran<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="index.php?hal=saran">Saran</a></li>
+                <li><a href="index.php?hal=tambah-saran">Saran</a></li>
             </ul>
         </li>
     </ul>

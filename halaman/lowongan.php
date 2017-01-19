@@ -53,7 +53,7 @@
                 <td><?php echo $data['alamat'] ?></td>
                 <td><?php echo $data['no_telp'] ?></td>
                 <td><?php echo $data['email'] ?></td>
-                <td></td>
+                <td class="text-center"><button class="btn btn-info">Kirim Lamaran</button></td>
                 <?php
                 $no++;
                 }

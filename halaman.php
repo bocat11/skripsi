@@ -44,6 +44,9 @@ switch ($halaman) {
     case 'saran':
         include "halaman/saran.php";
         break;
+    case 'tambah-saran':
+        include "halaman/tambah_saran.php";
+        break;
     case 'detail-info-alumni':
         include "halaman/detail-info-alumni.php";
         break;
