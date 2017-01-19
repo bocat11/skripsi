@@ -5,34 +5,32 @@
         </li>
         <li><a><i class="fa fa-edit"></i> Validasi Data <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="validasi.php"> validasi Kuisioner</a></li>
-                <li><a href="kuisioner.php">validasi loker </a></li>
+                <li><a href="index.php?hal=validasi-pertanyaan"> validasi Kuisioner</a></li>
+                <li><a href="index.php?hal=validasi-loker">validasi loker </a></li>
             </ul>
         </li>
-        <li><a><i class="fa fa-desktop"></i>Data Alumni<span class="fa fa-chevron-down"></span></a>
+        <li><a><i class="fa fa-users"></i> Data Alumni<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="index.php?hal=rincian">Rincian</a></li>
-
+                <li><a href="index.php?hal=rincian-alumni">Rincian Alumni</a></li>
             </ul>
         </li>
-        <li><a><i class="fa fa-table"></i> E-career<span class="fa fa-chevron-down"></span></a>
+        <li><a><i class="fa fa-table"></i> E-Career<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="index.php?hal=lowongan">Input Loker</a></li>
-                <li><a href="datapekerjaanadmin.php">Input Data pekerja</a></li>
+                <li><a href="index.php?hal=tambah-lowongan">Input Loker</a></li>
+                <li><a href="index.php?hal=lowongan">List Loker</a></li>
+                <li><a href="#">Input Data pekerja</a></li>
             </ul>
         </li>
         <li><a><i class="fa fa-bar-chart-o"></i> Grafik<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="grafikadmin.php">Grafik utama</a></li>
-                <li><a href="prodiadmin.php">Grafik yang sesuai dengan prodi</a></li>
-                <li><a href="wiraadmin.php">Grafik yang wiraswasta </a></li>
-
+                <li><a href="#">Grafik utama</a></li>
+                <li><a href="#">Grafik yang sesuai dengan prodi</a></li>
+                <li><a href="#">Grafik yang wiraswasta </a></li>
             </ul>
         </li>
-        <li><a><i class="fa fa-bar-chart-o"></i> Saran<span class="fa fa-chevron-down"></span></a>
+        <li><a><i class="fa fa-info-circle"></i> Saran<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="lihatsaran.php">lihat saran</a></li>
-
+                <li><a href="#">lihat saran</a></li>
             </ul>
         </li>
     </ul>
