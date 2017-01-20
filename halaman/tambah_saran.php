@@ -5,7 +5,7 @@
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
-            <form action="" method="post" role="form">
+            <form action="aksi/tambah_saran.php" method="post" role="form">
             	<div class="form-group">
             		<label for="">Kirim Saran Anda Kepada Kami</label>
                     <textarea name="saranVal" id="" cols="30" rows="10" class="form-control" placeholder="Tulisakan Saran Anda"></textarea>

@@ -13,6 +13,7 @@ if ($ketemu > 0 ) {
     $_SESSION['errorlogin'] = false;
     $_SESSION['id_user'] = $data['id'];
     $_SESSION['name'] = $data['name'];
+    $_SESSION['nim'] = $data['nim'];
     $_SESSION['avatar'] = $data['avatar'];
     $_SESSION['username'] = $data['username'];
     $_SESSION['level'] = $data['level'];
