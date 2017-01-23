@@ -19,6 +19,7 @@
                 <li><a href="index.php?hal=tambah-lowongan">Input Loker</a></li>
                 <li><a href="index.php?hal=lowongan">List Loker</a></li>
                 <li><a href="#">Input Data pekerja</a></li>
+                <li><a href="index.php?hal=master-perusahaan">Master Perusahaan</a></li>
             </ul>
         </li>
         <li><a><i class="fa fa-bar-chart-o"></i> Grafik<span class="fa fa-chevron-down"></span></a>

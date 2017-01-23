@@ -44,6 +44,12 @@ switch ($halaman) {
     case 'saran':
         include "halaman/saran.php";
         break;
+    case 'master-perusahaan':
+        include "halaman/master_perusahaan.php";
+        break;
+    case 'detail-perusahaan':
+        include "halaman/detail_perusahaan.php";
+        break;
     case 'tambah-saran':
         include "halaman/tambah_saran.php";
         break;
