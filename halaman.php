@@ -20,6 +20,12 @@ switch ($halaman) {
     case 'tambah-alumni':
         include "halaman/tambah_alumni.php";
         break;
+    case 'list-pertanyaan':
+        include "halaman/list_pertanyaan.php";
+        break;
+    case 'tambah-pertanyaan':
+        include "halaman/tambah_pertanyaan.php";
+        break;
     case 'grafik-dasar':
         include "halaman/grafik.php";
         break;

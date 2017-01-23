@@ -3,10 +3,10 @@
         <li>
             <a href="index.php?hal=beranda"><i class="fa fa-home"></i> Beranda</a>
         </li>
-        <li><a><i class="fa fa-edit"></i> Validasi Data <span class="fa fa-chevron-down"></span></a>
+        <li><a><i class="fa fa-edit"></i> Management Data <span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu">
-                <li><a href="index.php?hal=validasi-pertanyaan"> validasi Kuisioner</a></li>
-                <li><a href="index.php?hal=validasi-loker">validasi loker </a></li>
+                <li><a href="index.php?hal=list-pertanyaan">Pertanyaan</a></li>
+                <li><a href="index.php?hal=validasi-loker">Validasi loker </a></li>
             </ul>
         </li>
         <li><a><i class="fa fa-users"></i> Data Alumni<span class="fa fa-chevron-down"></span></a>
@@ -20,13 +20,6 @@
                 <li><a href="index.php?hal=lowongan">List Loker</a></li>
                 <li><a href="#">Input Data pekerja</a></li>
                 <li><a href="index.php?hal=master-perusahaan">Master Perusahaan</a></li>
-            </ul>
-        </li>
-        <li><a><i class="fa fa-bar-chart-o"></i> Grafik<span class="fa fa-chevron-down"></span></a>
-            <ul class="nav child_menu">
-                <li><a href="#">Grafik utama</a></li>
-                <li><a href="#">Grafik yang sesuai dengan prodi</a></li>
-                <li><a href="#">Grafik yang wiraswasta </a></li>
             </ul>
         </li>
         <li><a><i class="fa fa-info-circle"></i> Saran<span class="fa fa-chevron-down"></span></a>
