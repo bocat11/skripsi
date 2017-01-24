@@ -34,13 +34,20 @@ $data = mysqli_fetch_array(mysqli_query($konek,$query));
                     <label class="control-label col-md-3 col-sm-3 col-xs-3">Email</label>
 
                     <div class="col-md-9 col-sm-9 col-xs-9">
-                        <input type="text" class="form-control" data-inputmask="'mask': '99-999999'">
+                        <input type="text" class="form-control" value="<?php echo $data['email'] ?>">
                         <span class="fa fa-envelope form-control-feedback right" aria-hidden="true"></span>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Tempat tanggal lahir</label>
-
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Tempat Lahir</label>
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                        <input type="text" class="form-control"
+                               data-inputmask="'mask' : '****-****-****-****-****-***'">
+                        <span class="fa fa-calendar form-control-feedback right" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Tanggal Lahir</label>
                     <div class="col-md-9 col-sm-9 col-xs-9">
                         <input type="text" class="form-control"
                                data-inputmask="'mask' : '****-****-****-****-****-***'">
@@ -51,32 +58,8 @@ $data = mysqli_fetch_array(mysqli_query($konek,$query));
                     <label class="control-label col-md-3 col-sm-3 col-xs-3">Alamat</label>
 
                     <div class="col-md-9 col-sm-9 col-xs-9">
-                        <input type="text" class="form-control" data-inputmask="'mask' : '99-99999999'">
+                        <textarea name="name"  class="form-control" rows="4" cols="80"><?php echo $data['alamat'] ?></textarea>
                         <span class="fa fa-map-marker form-control-feedback right" aria-hidden="true"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Tahun masuk</label>
-
-                    <div class="col-md-9 col-sm-9 col-xs-9">
-                        <input type="text" class="form-control" data-inputmask="'mask' : '9999-9999-9999-9999'">
-                        <span class="fa fa-sign-in form-control-feedback right" aria-hidden="true"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Pekerjaan</label>
-
-                    <div class="col-md-9 col-sm-9 col-xs-9">
-                        <input type="text" class="form-control" data-inputmask="'mask' : '9999-9999-9999-9999'">
-                        <span class="fa fa-building form-control-feedback right" aria-hidden="true"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Nama perusahaan</label>
-
-                    <div class="col-md-9 col-sm-9 col-xs-9">
-                        <input type="text" class="form-control" data-inputmask="'mask' : '9999-9999-9999-9999'">
-                        <span class="fa fa-briefcase form-control-feedback right" aria-hidden="true"></span>
                     </div>
                 </div>
                 <div class="form-group">

@@ -1,3 +1,3 @@
 <?php
-$konek=mysqli_connect("localhost","root","123456","skripsibocat");
+$konek=mysqli_connect("localhost","root","","skripsibocat");
 ?>

@@ -47,6 +47,9 @@ switch ($halaman) {
     case 'pengalaman':
         include "halaman/pengalaman.php";
         break;
+    case 'tambah-pengalaman':
+        include "halaman/tambah_pengalaman.php";
+        break;
     case 'saran':
         include "halaman/saran.php";
         break;
@@ -58,6 +61,9 @@ switch ($halaman) {
         break;
     case 'tambah-saran':
         include "halaman/tambah_saran.php";
+        break;
+    case 'lamar-pekerjaan':
+        include "halaman/lamar_pekerjaan.php";
         break;
     case 'detail-info-alumni':
         include "halaman/detail-info-alumni.php";

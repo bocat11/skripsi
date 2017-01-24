@@ -4,24 +4,9 @@
             <?php if($_SESSION['level'] == "admin"){
                 echo "<a href=\"index.php?hal=tambah-lowongan\" class=\"btn btn-success\"><h2>Tambah Loker</h2></a>";
             } else {
-                echo "<h2>Data Lowongan Kerja</h2>";
+                echo "<h2>List Lowongan Kerja</h2>";
             }
             ?>
-            <ul class="nav navbar-right panel_toolbox">
-                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i
-                            class="fa fa-wrench"></i></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
             </ul>
             <div class="clearfix"></div>
         </div>
@@ -30,30 +15,30 @@
             $no = 1;
             $sql = "SELECT * FROM `loker` ";
             $hasil = mysqli_query($konek, $sql);
-            while ($data = mysqli_fetch_array($hasil)) {
             ?>
-            <table id='datatable' class='table table-striped table-bordered'>
+            <table id='datatable' class='table table-striped '>
                 <thead>
                 <tr>
-                    <th> No.</th>
-                    <th> Nama_perusahaan</th>
+                    <th>No.</th>
+                    <th>Perusahaan</th>
                     <th>Posisi</th>
-                    <th>Batas_waktu</th>
                     <th>Alamat</th>
-                    <th>No_telp</th>
-                    <th>Email</th>
-                    <th>action</th>
+                    <th class="text-center">Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                <td><?php echo $no ?></td>
-                <td><?php echo $data['nama_perusahaan'] ?></td>
-                <td><?php echo $data['posisi'] ?></td>
-                <td><?php echo $data['batas_waktu'] ?></td>
-                <td><?php echo $data['alamat'] ?></td>
-                <td><?php echo $data['no_telp'] ?></td>
-                <td><?php echo $data['email'] ?></td>
-                <td class="text-center"><button class="btn btn-info">Kirim Lamaran</button></td>
+                <?php
+                while ($data = mysqli_fetch_array($hasil)) {
+                ?>
+                <tr>
+                  <td><?php echo $no ?></td>
+                  <td><?php echo $data['nama_perusahaan'] ?></td>
+                  <td><?php echo $data['posisi'] ?></td>
+                  <td><?php echo $data['alamat'] ?></td>
+                  <td class="text-center" width="150px">
+                    <a href="index.php?hal=lamar-pekerjaan&id=<?php echo $data['id_loker'] ?>" class="btn btn-info">Kirim Lamaran</a>
+                  </td>
+                </tr>
                 <?php
                 $no++;
                 }

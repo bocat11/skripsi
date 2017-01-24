@@ -5,10 +5,7 @@
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
-            <h1>Ini Adalah Dashboard</h1>
-            <?php
-            print_r($_SESSION);
-            ?>
+          <img src="images/dashboard.jpg" alt="" class="img-responsive">  
         </div>
     </div>
 </div>
