@@ -29,6 +29,9 @@ switch ($halaman) {
     case 'grafik-dasar':
         include "halaman/grafik.php";
         break;
+    case 'grafik-alumni':
+        include "halaman/grafik_alumni.php";
+        break;
     case 'validasi-pertanyaan':
         include "halaman/validasi_pertanyaan.php";
         break;

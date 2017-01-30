@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 24 Jan 2017 pada 20.36
--- Versi Server: 10.1.13-MariaDB
+-- Generation Time: Jan 14, 2017 at 12:13 PM
+-- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.23
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `cohort_pdpt`
+-- Table structure for table `cohort_pdpt`
 --
 
 CREATE TABLE `cohort_pdpt` (
@@ -46,11 +46,11 @@ CREATE TABLE `cohort_pdpt` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `cohort_pdpt`
+-- Dumping data for table `cohort_pdpt`
 --
 
 INSERT INTO `cohort_pdpt` (`id`, `tahun`, `semester`, `nim`, `nama`, `status_kerja`, `nama_perusahaan`, `alamat_perusahaan`, `posisi`, `jabatan`, `ips`, `tot_sks`, `ipk`, `email`, `alamat`, `tahun lulus`) VALUES
-(118, 2015, 2, 2011230045, 'ABDUL JABAR HAKIM', '', '', '', '', '', 0, 152, 4, 'abduljabar.hakim11@gmail.com', 'Jl. Cikunir Raya, Jati Asih, Jati Mekar, Bekasi', 0),
+(118, 2015, 2, 2011110008, 'DICKY FADLY MAULANA', '', '', '', '', '', 0, 152, 2.71, '', '', 0),
 (119, 2015, 2, 2011110010, 'PUTRI AYU PARASATI', '', '', '', '', '', 1.11, 132, 2.03, '', '', 0),
 (120, 2015, 2, 2011110014, 'MUTHI KUSUMA S.', '', '', '', '', '', 0, 159, 2.34, '', '', 0),
 (121, 2015, 2, 2011110017, 'YUANDINI LESTARI', '', '', '', '', '', 0.2, 156, 2.54, '', '', 0),
@@ -182,7 +182,7 @@ INSERT INTO `cohort_pdpt` (`id`, `tahun`, `semester`, `nim`, `nama`, `status_ker
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `hasil_kuesioner`
+-- Table structure for table `hasil_kuesioner`
 --
 
 CREATE TABLE `hasil_kuesioner` (
@@ -195,7 +195,7 @@ CREATE TABLE `hasil_kuesioner` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jawab_pertanyaan`
+-- Table structure for table `jawab_pertanyaan`
 --
 
 CREATE TABLE `jawab_pertanyaan` (
@@ -206,7 +206,7 @@ CREATE TABLE `jawab_pertanyaan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `jawab_pertanyaan`
+-- Dumping data for table `jawab_pertanyaan`
 --
 
 INSERT INTO `jawab_pertanyaan` (`id`, `nim`, `id_pertanyaan`, `jawaban`) VALUES
@@ -219,7 +219,7 @@ INSERT INTO `jawab_pertanyaan` (`id`, `nim`, `id_pertanyaan`, `jawaban`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kuesioner`
+-- Table structure for table `kuesioner`
 --
 
 CREATE TABLE `kuesioner` (
@@ -246,7 +246,7 @@ CREATE TABLE `kuesioner` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kuesioner`
+-- Dumping data for table `kuesioner`
 --
 
 INSERT INTO `kuesioner` (`id_kuesioner`, `nim`, `q1`, `a1`, `q2`, `a2`, `q3`, `a3`, `q4`, `a4`, `q5`, `a5`, `q6`, `a6`, `q7`, `a7`, `q8`, `a8`, `q9`, `a9`) VALUES
@@ -255,7 +255,7 @@ INSERT INTO `kuesioner` (`id_kuesioner`, `nim`, `q1`, `a1`, `q2`, `a2`, `q3`, `a
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `list_pertanyaan`
+-- Table structure for table `list_pertanyaan`
 --
 
 CREATE TABLE `list_pertanyaan` (
@@ -268,7 +268,7 @@ CREATE TABLE `list_pertanyaan` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `list_pertanyaan`
+-- Dumping data for table `list_pertanyaan`
 --
 
 INSERT INTO `list_pertanyaan` (`id`, `pertanyaan`, `type_input`, `sugestion`, `jawaban`, `waktu_buat`) VALUES
@@ -278,7 +278,7 @@ INSERT INTO `list_pertanyaan` (`id`, `pertanyaan`, `type_input`, `sugestion`, `j
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `login`
+-- Table structure for table `login`
 --
 
 CREATE TABLE `login` (
@@ -286,94 +286,53 @@ CREATE TABLE `login` (
   `username` varchar(255) NOT NULL,
   `avatar` varchar(255) NOT NULL DEFAULT 'user.png',
   `name` varchar(255) NOT NULL,
-  `nim` int(11) NOT NULL,
   `password` varchar(255) NOT NULL,
   `level` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `login`
+-- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`id`, `username`, `avatar`, `name`, `nim`, `password`, `level`) VALUES
-(1, 'admin', 'user.png', 'Admin', 0, 'admin', 'admin'),
-(2, 'alumni', 'user.png', 'Alumni', 2011230045, 'alumni', 'alumni'),
-(3, 'guest', 'user.png', 'Guest', 0, 'guest', 'guest');
+INSERT INTO `login` (`id`, `username`, `avatar`, `name`, `password`, `level`) VALUES
+(1, 'admin', 'user.png', 'Admin', 'admin', 'admin'),
+(2, 'alumni', 'user.png', 'Alumni', 'alumni', 'alumni'),
+(3, 'guest', 'user.png', 'Guest', 'guest', 'guest');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `loker`
+-- Table structure for table `loker`
 --
 
 CREATE TABLE `loker` (
   `id_loker` int(255) NOT NULL,
   `nama_perusahaan` varchar(200) NOT NULL,
   `posisi` varchar(200) NOT NULL,
-  `batas_waktu` date NOT NULL,
-  `alamat` text NOT NULL,
+  `batas_waktu` varchar(200) NOT NULL,
+  `alamat` varchar(200) NOT NULL,
   `no_telp` int(200) NOT NULL,
   `email` varchar(200) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `loker`
+-- Dumping data for table `loker`
 --
 
 INSERT INTO `loker` (`id_loker`, `nama_perusahaan`, `posisi`, `batas_waktu`, `alamat`, `no_telp`, `email`) VALUES
-(1, 'PT. CHUHATSU INDONESIA', 'IT SUPPORT', '2017-01-28', 'Jl, Raya Cibitung, Bekasi', 2147483647, 'ykk@gmail.com'),
-(2, 'PT. TMMIN', 'WEB DEVELOPER', '2017-01-28', 'MM2100', 2147483647, 'tmmin@tmmin.com');
+(1, 'pt ykk', 'manager', '21 desember 2017', 'jl raya cibitung', 2147483647, 'ykk@gmail.com');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `master_perusahaan`
---
-
-CREATE TABLE `master_perusahaan` (
-  `id_perusahaan` varchar(5) NOT NULL,
-  `nama_perusahaan` varchar(50) NOT NULL,
-  `alamat_perusahaan` text NOT NULL,
-  `telepon` varchar(20) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `nama_pic` varchar(50) DEFAULT NULL,
-  `tlp_pic` varchar(20) DEFAULT NULL,
-  `bidang_usaha` varchar(50) DEFAULT NULL,
-  `keterangan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `master_perusahaan`
---
-
-INSERT INTO `master_perusahaan` (`id_perusahaan`, `nama_perusahaan`, `alamat_perusahaan`, `telepon`, `email`, `nama_pic`, `tlp_pic`, `bidang_usaha`, `keterangan`) VALUES
-('1', 'PT. Maju Mundur', 'Jakarta Timur', '08976543', '1233245644.3456.3', 'Wahuy', '081281056838', 'Industri Mabel', ''),
-('2', 'PT BOCAT', 'Jl. Sesat', '0987654321', '123.456.789.0', 'Umri', '085641738040', 'Industri Plastik', ''),
-('3', 'PT. HAKIM', 'Jalan Jalan', '021-9999', '02.000.0-000.000', 'Umri', '081281056838', 'Industri Kaca', '');
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `saran`
+-- Table structure for table `saran`
 --
 
 CREATE TABLE `saran` (
   `id` int(255) NOT NULL,
-  `id_user` int(11) NOT NULL,
   `saran` text NOT NULL,
-  `tanggal` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `tanggal` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `saran`
---
-
-INSERT INTO `saran` (`id`, `id_user`, `saran`, `tanggal`) VALUES
-(1, 2, 'asd', '2017-01-21 02:08:09'),
-(2, 2, 'ini adalah saran dari saya', '2017-01-21 02:08:49'),
-(3, 2, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus earum harum placeat. Animi harum quo sequi. Culpa cum cumque dicta doloremque incidunt laborum magnam omnis recusandae reprehenderit, rerum sed tempore?', '2017-01-21 02:09:51'),
-(4, 2, 'tolong dong dibantu\r\n', '2017-01-22 23:04:16'),
-(5, 2, 'woi tolong dibantu dong\r\n', '2017-01-23 21:46:40');
 
 --
 -- Indexes for dumped tables
@@ -422,12 +381,6 @@ ALTER TABLE `loker`
   ADD PRIMARY KEY (`id_loker`);
 
 --
--- Indexes for table `master_perusahaan`
---
-ALTER TABLE `master_perusahaan`
-  ADD PRIMARY KEY (`id_perusahaan`);
-
---
 -- Indexes for table `saran`
 --
 ALTER TABLE `saran`
@@ -471,12 +424,12 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `loker`
 --
 ALTER TABLE `loker`
-  MODIFY `id_loker` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_loker` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `saran`
 --
 ALTER TABLE `saran`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -12,6 +12,7 @@
         <li class="active"><a><i class="fa fa-users"></i> Data Alumni<span class="fa fa-chevron-down"></span></a>
             <ul class="nav child_menu" style="display:block">
                 <li><a href="index.php?hal=rincian-alumni">Rincian Alumni</a></li>
+                <li><a href="index.php?hal=grafik-alumni">Grafik Alumni</a></li>
             </ul>
         </li>
         <li class="active"><a><i class="fa fa-table"></i> E-Career<span class="fa fa-chevron-down"></span></a>

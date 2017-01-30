@@ -31,11 +31,44 @@ $data = mysqli_fetch_array(mysqli_query($konek,$query));
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Email</label>
-
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Status</label>
                     <div class="col-md-9 col-sm-9 col-xs-9">
-                        <input type="text" class="form-control" value="<?php echo $data['email'] ?>">
+                        <select class="form-control" name="status_karyawan">
+                            <option value="">Pilih</option>
+                            <option value="">Karyawan</option>
+                            <option value="">Wiraswasta</option>
+                            <option value="">Karyawan Di Luar Negeri</option>
+                            <option value="">Belum Bekerja</option>
+                        </select>
                         <span class="fa fa-envelope form-control-feedback right" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Nama Perusahaan</label>
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                        <input type="text" class="form-control" value="">
+                        <span class="fa fa-building-o form-control-feedback right" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Alamat Kantor</label>
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                      <textarea name="name" rows="4" cols="80" class="form-control"></textarea>
+                        <span class="fa fa-map-marker form-control-feedback right" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Posisi</label>
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                        <input type="text" class="form-control" value="">
+                        <span class="fa fa-users form-control-feedback right" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-3">Jabatan</label>
+                    <div class="col-md-9 col-sm-9 col-xs-9">
+                        <input type="text" class="form-control" value="">
+                        <span class="fa fa-star form-control-feedback right" aria-hidden="true"></span>
                     </div>
                 </div>
                 <div class="form-group">
