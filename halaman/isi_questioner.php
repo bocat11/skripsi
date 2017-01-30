@@ -5,13 +5,13 @@
             <div class="clearfix"></div>
         </div>
         <div class="x_content">
-            <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+            <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="halaman/doIsiQuestioner.php" method="POST">
 
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-3">Nama perusahaan</label>
 
                     <div class="col-md-9 col-sm-9 col-xs-9">
-                        <input type="text" class="form-control" data-inputmask="'mask': '99/99/9999'">
+                        <input type="text" class="form-control" data-inputmask="'mask': '99/99/9999'"name="nama_perusahaan">
                         <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                     </div>
                 </div>
@@ -23,22 +23,22 @@
                     <div class="col-md-9 col-sm-9 col-xs-9">
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" checked name="iCheck"> PNS
+                                <input type="radio" class="flat" name="status_pekerjaan" value="PNS"> PNS
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" name="iCheck"> Karyawan swasta
+                                <input type="radio" class="flat" name="status_pekerjaan" value="Karyawan Swasta"> Karyawan swasta
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" name="iCheck"> Wirausaha
+                                <input type="radio" class="flat" name="status_pekerjaan" value="Wirausaha"> Wirausaha
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" name="iCheck"> Tidak bekerja
+                                <input type="radio" class="flat" name="status_pekerjaan" value="Tidak bekerja"> Tidak bekerja
                             </label>
                         </div>
 
@@ -50,22 +50,22 @@
                     <div class="col-md-9 col-sm-9 col-xs-9">
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" checked name="iCheck"> IT
+                                <input type="radio" class="flat" name="bidang_pekerjaan" value="IT"> IT
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" name="iCheck"> Admin
+                                <input type="radio" class="flat" name="bidang_pekerjaan" value="Admin"> Admin
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" name="iCheck"> Buruh
+                                <input type="radio" class="flat" name="bidang_pekerjaan" value="Buruh"> Buruh
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" name="iCheck"> Lain-lain
+                                <input type="radio" class="flat" name="bidang_pekerjaan" value="Lain-lain"> Lain-lain
                             </label>
                         </div>
 
@@ -77,22 +77,22 @@
                     <div class="col-md-9 col-sm-9 col-xs-9">
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" checked name="iCheck"> jaringan
+                                <input type="radio" class="flat" name="sub_bidang" value="jaringan"> jaringan
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" name="iCheck"> programer
+                                <input type="radio" class="flat" name="sub_bidang" value="programer"> programer
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" name="iCheck"> teknisi
+                                <input type="radio" class="flat" name="sub_bidang" value="teknik"> teknisi
                             </label>
                         </div>
                         <div class="radio">
                             <label>
-                                <input type="radio" class="flat" name="iCheck"> lain-lain
+                                <input type="radio" class="flat" name="sub_bidang" value="lain-lain"> lain-lain
                             </label>
                         </div>
 
@@ -105,27 +105,25 @@
                             <label>Apakah materi perkuliahan dapat diimplementasikan di tempat kerja?</label>
 
                             <p>
-                                Ya:<input type="radio" class="flat" name="gender" id="genderM" value="M" checked=""
+                                Ya:<input type="radio" class="flat" name="materi" id="genderM" value="M"
                                           required/>
-                                Tidak:<input type="radio" class="flat" name="gender" id="genderF" value="F"/>
-                                Sebagian:<input type="radio" class="flat" name="gender" id="genderM" value="M"
-                                                checked="" required/>
-                                Tidak tahu:<input type="radio" class="flat" name="gender" id="genderM" value="M"
-                                                  checked=""
-                                                  required/>
+                                Tidak:<input type="radio" class="flat" name="materi" id="genderF" value="F"/>
+                                Sebagian:<input type="radio" class="flat" name="materi" id="genderM" value="M"
+                                                required/>
+                                Tidak tahu:<input type="radio" class="flat" name="materi" id="genderM" value="M"
+                                                 required/>
                             </p>
                         </div>
                         <div class="form-group">
                             <label>Apakah anda bekerja sesuai bidang perkuliahan?</label>
 
                             <p>
-                                Ya:<input type="radio" class="flat" name="gender" id="genderM" value="M" checked=""
+                                Ya:<input type="radio" class="flat" name="bidang" id="genderM" value="Ya"
                                           required/>
-                                Tidak:<input type="radio" class="flat" name="gender" id="genderF" value="F"/>
-                                Sebagian:<input type="radio" class="flat" name="gender" id="genderM" value="M"
-                                                checked="" required/>
-                                Tidak tahu:<input type="radio" class="flat" name="gender" id="genderM" value="M"
-                                                  checked=""
+                                Tidak:<input type="radio" class="flat" name="bidang" id="genderF" value="Tidak"/>
+                                Sebagian:<input type="radio" class="flat" name="bidang" id="genderM" value="Sebagian"
+                                                required/>
+                                Tidak tahu:<input type="radio" class="flat" name="bidang" id="genderM" value="Tidak tahu"
                                                   required/>
                             </p>
                         </div>
@@ -133,13 +131,11 @@
                             <label>Apakah pengalaman organisasi bermanfaat di dunia kerja?</label>
 
                             <p>
-                                Ya:<input type="radio" class="flat" name="gender" id="genderM" value="M" checked=""
+                                Ya:<input type="radio" class="flat" name="organisasi" id="genderM" value="Ya"
                                           required/>
-                                Tidak:<input type="radio" class="flat" name="gender" id="genderF" value="F"/>
-                                Sebagian:<input type="radio" class="flat" name="gender" id="genderM" value="M"
-                                                checked="" required/>
-                                Tidak tahu:<input type="radio" class="flat" name="gender" id="genderM" value="M"
-                                                  checked=""
+                                Tidak:<input type="radio" class="flat" name="organisasi" id="genderF" value="Tidak"/>
+                                Sebagian:<input type="radio" class="flat" name="organisasi" id="genderM" value="Sebagian" required/>
+                                Tidak tahu:<input type="radio" class="flat" name="organisasi" id="genderM" value="Tidak tahu"
                                                   required/>
                             </p>
                         </div>
@@ -147,14 +143,12 @@
                             <label>Apakah nilai IPK dan mata kuliah berpengaruh dalam mencari pekerjaan?</label>
 
                             <p>
-                                Sangat:<input type="radio" class="flat" name="gender" id="genderM" value="M" checked=""
+                                Sangat:<input type="radio" class="flat" name="ipk" id="genderM" value="Sangat"
                                               required/>
-                                Biasa saja:<input type="radio" class="flat" name="gender" id="genderF" value="F"/>
-                                Tidak berpengaruh:<input type="radio" class="flat" name="gender" id="genderM" value="M"
-                                                         checked=""
+                                Biasa saja:<input type="radio" class="flat" name="ipk" id="genderF" value="Biasa saja"/>
+                                Tidak berpengaruh:<input type="radio" class="flat" name="ipk" id="genderM" value="Tidak berpengaruh"
                                                          required/>
-                                Tidak tahu:<input type="radio" class="flat" name="gender" id="genderM" value="M"
-                                                  checked=""
+                                Tidak tahu:<input type="radio" class="flat" name="ipk" id="genderM" value="Tidak tahu"
                                                   required/>
                             </p>
                         </div>
@@ -162,17 +156,16 @@
                             <label>Apakah atituted berpengaruh di dunia kerja?</label>
 
                             <p>
-                                Ya:<input type="radio" class="flat" name="gender" id="genderM" value="M" checked=""
+                                Ya:<input type="radio" class="flat" name="attitude" id="genderM" value="Ya"
                                           required/>
-                                Tidak:<input type="radio" class="flat" name="gender" id="genderF" value="F"/>
-                                Sebagian:<input type="radio" class="flat" name="gender" id="genderM" value="M"
-                                                checked="" required/>
-                                Tidak tahu:<input type="radio" class="flat" name="gender" id="genderM" value="M"
-                                                  checked=""
+                                Tidak:<input type="radio" class="flat" name="attitude" id="genderF" value="Tidak"/>
+                                Sebagian:<input type="radio" class="flat" name="attitude" id="genderM" value="Sebagian"
+                                                required/>
+                                Tidak tahu:<input type="radio" class="flat" name="attitude" id="genderM" value="Tidak tahu"
                                                   required/>
                             </p>
                         </div>
-                    </form>
+                    
                 </div>
 
                 <div class="ln_solid"></div>
