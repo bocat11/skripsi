@@ -71,6 +71,9 @@ switch ($halaman) {
     case 'detail-info-alumni':
         include "halaman/detail-info-alumni.php";
         break;
+    case 'kelola-pengguna':
+        include "halaman/kelola_pengguna.php";
+        break;
     default:
         include "halaman/dashboard.php";
         break;

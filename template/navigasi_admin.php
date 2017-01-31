@@ -7,6 +7,7 @@
             <ul class="nav child_menu" style="display:block">
                 <li><a href="index.php?hal=list-pertanyaan">Pertanyaan</a></li>
                 <li><a href="index.php?hal=validasi-loker">Validasi loker </a></li>
+                <li><a href="index.php?hal=kelola-pengguna">Kelola Pengguna </a></li>
             </ul>
         </li>
         <li class="active"><a><i class="fa fa-users"></i> Data Alumni<span class="fa fa-chevron-down"></span></a>
